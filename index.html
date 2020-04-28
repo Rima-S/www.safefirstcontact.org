@@ -103,16 +103,17 @@ a:link, a:visited, a:hover, a:active {
   <li><a href="" data-toggle="modal" data-target="#Modal3">Apps</a></li>
 </ul>
 
-<div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal fade" id="DigitalSecurityLibrary" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Guides and manuals</h5>
+        <h5 class="modal-title">DigitalSecurityLibrary</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
+       <b>Guides and manuals</b>
         <ul>
           <li><a href="https://7amleh.org/7amleh-center-palestinian-manual-on-digital-security/">https://7amleh.org/7amleh-center-palestinian-manual-on-digital-security/</a></li>
           <li><a href="https://motoon.org/resources/mdsm">https://motoon.org/resources/mdsm</a></li>
@@ -126,46 +127,12 @@ a:link, a:visited, a:hover, a:active {
           <li><a href="https://tacticaltech.org/themes/digital-security/">https://tacticaltech.org/themes/digital-security/</a></li>
           <li><a href="https://asl19.org/ar/blog/2019-05-16-best-encrypted-messaging-apps">https://asl19.org/ar/blog/2019-05-16-best-encrypted-messaging-apps</a></li>
         </ul>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="Modal2" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Articles and papers</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
+        <b>Articles and papers</b>
         <ul>
           <li><a href="https://smex.org/online-privacy-threats-to-women-and-the-lgbtiq-communities-in-lebanon/">Online Privacy Threats to Women and LGBTIQ Communities in Lebanon (smex.org)</a></li>
           <li><a href="https://raseef22.com/life/2018/11/01/%d9%87%d8%a7%d8%aa%d9%81%d9%83%d9%85-%d8%a7%d9%84%d8%ac%d9%88%d8%a7%d9%84-%d8%a3%d8%af%d8%a7%d8%a9-%d8%aa%d8%ac%d8%b3%d8%b3-%d9%88%d8%aa%d8%b9%d9%82%d8%a8-%d8%a5%d9%84%d9%8a%d9%83%d9%85-%d9%83/">هاتفكم الجوال أداة تجسس وتعقب... إليكم كل التفاصيل (raseef22.com)</a></li>
         </ul>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="Modal3" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Apps</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
+        <b>Apps</b>
         <ul>
           <li><a href="https://secfirst.org">Umbrella App</a></li>
         </ul>
@@ -177,7 +144,7 @@ a:link, a:visited, a:hover, a:active {
   </div>
 </div>
 
-<div class="modal fade" id="Modal4" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal fade" id="ResponsibleDataPolicy" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -252,6 +219,13 @@ $(document).on('mousemove', function( event ) {
   posX = event.pageX;
   posY = event.pageY;
 })
+
+$(document).ready(function () {
+  var target = document.location.hash;
+  if (target.length && (target === "#RiskAssessmentSurvey" || target === "#ResponsibleDataPolicy)){
+    $(target).modal('show');
+  }
+});
 
 </script>
 
